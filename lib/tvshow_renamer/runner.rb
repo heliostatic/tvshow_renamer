@@ -27,6 +27,10 @@ module TVShowRenamer
           options[:recursive] = recursive
         end
 
+        opts.on("-o", "--log-only", "Produce a change log but don't make any changes") do |log_only|
+          options[:log_only] = log_only
+        end  
+
         opts.separator ""
 
         opts.on_tail("-h", "--help", "Show this message") do

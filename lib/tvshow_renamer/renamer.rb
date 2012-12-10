@@ -1,4 +1,3 @@
-# encoding: utf-8
 require 'fileutils'
 
 module TVShowRenamer
@@ -136,7 +135,7 @@ module TVShowRenamer
     end
 
     def move_tvshow_file
-      FileUtils.mv @tvfile.filename, @tvfile.new_filename
+      FileUtils.mv @tvfile.filename, @tvfile.new_filename unless @options[:log_only]
       log_rename
     end
 
